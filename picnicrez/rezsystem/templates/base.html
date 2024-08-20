@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{% static 'rezsystem/CSS/index.css' %}">
+        <title> NN Shelter Reservations</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <nav class="logo">
+                    <img src="{% static 'rezsystem/images/logo/NNLogo.png' %}" alt="NNLogo" class="logo"/>
+                    <p class="p-header"> Picnic Shelter Reservation System </p>
+                </nav>
+                <nav>
+                        <li><a href="{ % url 'index' %}">Home</a></li>
+                        <li><a href="#">Maps</a></li>
+                        <li><a href="#">Rules</a></li>
+                        <li><a href="{ % url 'FAQ'%}">FAQ</a></li>
+                        <li><a href="#">Checkout</a></li>
+                </nav>
+            </div>
+        </header>
+    
+
+    {% block content %}
+    
+    <!--All Webpages that extend this base html file and use the block tags will display content here-->
+
+    {% end block %}
+
+
+    </body>
+</html>
