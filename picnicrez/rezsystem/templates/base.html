@@ -2,36 +2,38 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <header>
+        <title> NN Shelter Reservations</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="{% static 'rezsystem/CSS/index.css' %}">
-        <title> NN Shelter Reservations</title>
-    </head>
+        <link rel="stylesheet" href="{% static 'rezsystem/CSS/FAQ.css' %}">
+    </header>
     <body>
-        <header class="header">
-            <div class="container">
-                <nav class="logo">
-                    <img src="{% static 'rezsystem/images/logo/NNLogo.png' %}" alt="NNLogo" class="logo"/>
-                    <p class="p-header"> Picnic Shelter Reservation System </p>
-                </nav>
-                <nav>
-                        <li><a href="{ % url 'index' %}">Home</a></li>
-                        <li><a href="#">Maps</a></li>
-                        <li><a href="#">Rules</a></li>
-                        <li><a href="{ % url 'FAQ'%}">FAQ</a></li>
-                        <li><a href="#">Checkout</a></li>
-                </nav>
-            </div>
-        </header>
-    
+        <div class="container">
+            {% block nav%}
+            <nav class="logo">
+                <img src="{% static 'rezsystem/images/logo/NNLogo.png' %}" alt="NNLogo" class="logo"/>
+                <p class="p-header"> Picnic Shelter Reservation System </p>
 
-    {% block content %}
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="#">Maps</a></li>
+                    <li><a href="#">Rules</a></li>
+                    <li><a href="{% url 'FAQ' %}">FAQ</a></li>
+                    <li><a href="#">Checkout</a></li>
+                </ul>
+            </nav>
+            {% endblock %}
+        </div>
+    <main>
+
+        {% block content %}
     
     <!--All Webpages that extend this base html file and use the block tags will display content here-->
 
-    {% end block %}
-
+        {% endblock %}
+    </main>
 
     </body>
 </html>

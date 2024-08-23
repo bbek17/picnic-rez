@@ -1,1 +1,111 @@
-{% extends base.html %}
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="faqh1">
+        <h1>Frequently Asked Questions</h1>
+    </div>
+    <div class="line"></div>
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">How long do I get my shelter reservation for?
+                <i class="arrow fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <p> 
+                    The shelters are guranteed to be clean by 10 am, but you are welcome to set up as early as you would like to.
+                    The shelter reservation is good until sunset on the day of your rental.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What is your cancellation policy?
+                <i class="arrow fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <p> 
+                   Our cancellation policy allows returns more than 14 days of reservation date. 
+                   Calls within the 14 period would allow for a rescheduling of the picnic shelter reservation.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How long can it take to receive my refund?
+                <i class="arrow fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <p> 
+                    The amount of time it takes to receive the issued refunds depends on the method of payment. Credit/Debit payments can be expected
+                    in 5 to 10 business days. Cash payments have to be returned as a check and can take several weeks to be processed through City Center.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How many tables are available at my shelter?
+                <i class="arrow fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <p>
+                    Depending the size of the shelter the amount of tables varies: 
+                    <ul class="faq-bullets">
+                        <li> Our Full shelter, which holds up to 35 people, typically has 3 to 4 tables </li>
+                        <li> Our Large shelter, which holds up to 70 people, typically has 8 tables </li>
+                        <li> Our Group shelter, which holds up to 100 people, typically has 15 tables </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Does my shelter have a grill?
+                <i class="arrow fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <p>
+                   Each shelter comes with a charcoal grill that is sized to accommodate 
+                   cooking for the maximum number of guests that the shelter can handle.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Can I bring my own grill?
+                <i class="arrow fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <p>
+                   The city provides one large charcoal at each shelter. Outside grills are prohibited unless it is around the size of a laptop, ie a single 
+                   burner or a George Forman. Check our rules page for more information on what is prohibited. An example for what may be allowed:
+                   <img src="{% static 'rezsystem/images/misc/OutsideGrill.png' %}" alt="Single Burner Grill"></img>
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Are balloons allowed in the shelter?
+                <i class="arrow fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <p>No, balloons are not allowed in the park. Check our rules page for more information on what is prohibited.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Can I attach a banner to the shelter?
+                <i class="arrow fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <p>
+                   No, you are not allowed to attach anything to any part of the shelter. 
+                   Check our rules page for more information on what is prohibited.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Can I utilize smoke blaster for a gender reveal?
+                <i class="arrow fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <p>
+                   Unfortunately, smoke blasters are considered an explosive and are explicity prohibited for use in the parks. 
+                   Check our rules page for more information on what is prohibited.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src={% static 'rezsystem/JS/FAQ.js' %}></script>
+</body>
+</html>
+{% endblock %}

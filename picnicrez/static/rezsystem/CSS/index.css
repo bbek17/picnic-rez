@@ -8,9 +8,11 @@ header {
 	background: grey;
     position: absolute;
     text-align: right;
+    top: 0;
     width: 100%;
-    height: 200px;
+    height: 225px;
     border: none;
+    z-index: 0;
 }
 
 header::after {
@@ -33,6 +35,7 @@ nav img{
     height: auto;
     max-width: 500px;
     max-height: 250px;
+    z-index: 1;
 }
 
 @media screen and (min-width: 1246px){
@@ -47,6 +50,7 @@ nav img{
         font-family: "Helvetica", sans-serif;
         font-size: 45px;
         font-weight: bold;
+        z-index: 1;
     }}
 @media screen and (max-width: 1245px) and (min-width: 870px){
         .p-header {
@@ -60,10 +64,12 @@ nav img{
             font-family: "Helvetica", sans-serif;
             font-size: 3.75vw;
             font-weight: bold;
+            z-index: 1;
         }}
 @media screen and (max-width: 869px){
     .p-header{
         display: none;
+        z-index: 1;
     }
 }
 nav li {
@@ -71,24 +77,25 @@ nav li {
 	display: inline-block;
     margin-top: 16px;
     margin-bottom: 16px;
-    margin-left: 16px;
+    margin-left: 20px;
     position: relative;
+    z-index: 1;
 }
 nav a{
     display: inline-block;
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     text-transform: uppercase;
     position: relative;
     text-align: center;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 nav a::before {
 	content: '';
     display: block;
     height: 2px;
-    width: 100%;
-    background-color: rgb(13, 164, 88) ; 
+    background-color:rgb(224, 87, 72); 
     position: absolute;
     bottom: -.25em;
     top: 10;
@@ -97,7 +104,7 @@ nav a::before {
 }
 
 nav a:hover {
-    color: rgb(13, 164, 88) ;
+    color: white;
 }
 
 nav a:hover::before {
@@ -116,13 +123,14 @@ body {
     left: 0;
     margin: 0;
     padding: 0;
-    height: 100vh; /* Adjust as needed */
+    height: 100vh; 
     width: 100vw;
     overflow: hidden;
 }
 
 .picnicimage {
     position: absolute;
+    top: 78px;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -134,41 +142,72 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white; /* Adjust text color as needed */
+    color: rgb(255, 255, 255); 
     font-family: "Helvetica", sans-serif;
     font-size: 1.8vw;
     font-weight: bold;
     margin: 0;
     text-shadow: 0.1px 0.1px 0.1px black;
     white-space: nowrap;
-    z-index: 1; /* Ensure text is above the image */
+    z-index: 1; 
 }
 
 .picnicinfo {
-    position: relative;
-    margin-top: 520px;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 75%;
+    max-width: 1000px;
+    margin: 150px auto;
     padding: 20px;
     color: black;
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+.index-boxtable {
+    margin-top: 0;
+    display: table;
+    width: 100%;
+}
+
+.index-boxrow {
+    display: table-row;
+}
+
+.index-boxcell {
+    display: table-cell;
+    padding: 15px;
+    border: 1px black; /* Optional border for cells */
+    vertical-align: top;
+}
+
+.index-boxcell1, .index-boxcell2, .index-boxcell5 {
+    font-size: 3vw;
+    font-family: "Helvetica", sans-serif;
+    font-weight: bold;
+    border: 1px black; /* Optional border for cells */
     text-align: center;
 }
 
-.picnicinfo p1, p2, p5{
-    font-size: 5vw;
-    font-family: "Helvetica", sans-serif;
-    font-weight: bold;
+.index-boxcell1, .index-boxcell5 {
+    color: black;
 }
 
-.picnicinfo p1, p5 {
-    color: black ;
+.index-boxcell2 {
+    color: rgb(36, 60, 123);
 }
 
-.picnicinfo p2 {
-    color: rgb(13, 164, 88)  ;
+.index-boxcell3, .index-boxcell4 {
+    font-size: 1vw;
+    font-family: "Arial", sans-serif;
+    line-height: 1.3;
+    border: 1px black; /* Optional border for cells */
+    text-align: center;
 }
 
+.index-list {
+    margin: 1%;
+    padding-left: 100px; /* Indent list items */
+    text-align: left;
+}
 
-
+.index-list li {
+    margin-bottom: 10px; /* Space between list items */
+}
