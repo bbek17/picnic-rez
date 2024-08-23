@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'picnic_res',
         'USER': 'dbadmin',
-        'PASSWORD': 'VB-Bumin17',
+        'PASSWORD': 'FillInPassword',
         'HOST': 'localhost',
         'PORT': '3306',
     }
