@@ -76,12 +76,8 @@ WSGI_APPLICATION = 'picnicrez.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'picnic_res',
-        'USER': 'dbadmin',
-        'PASSWORD': 'FillInPassword',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
