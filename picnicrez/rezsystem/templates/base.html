@@ -2,38 +2,43 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <header>
-        <title> NN Shelter Reservations</title>
+    <head>
+        <title>{% block title%}NN Shelter Reservations{% endblock %}</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{% static 'rezsystem/CSS/base.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'rezsystem/CSS/index.css' %}">
         <link rel="stylesheet" href="{% static 'rezsystem/CSS/FAQ.css' %}">
-    </header>
+    </head>
     <body>
-        <div class="container">
-            {% block nav%}
-            <nav class="logo">
-                <img src="{% static 'rezsystem/images/logo/NNLogo.png' %}" alt="NNLogo" class="logo"/>
-                <p class="p-header"> Picnic Shelter Reservation System </p>
+        <header>
+            <div class="container">
+                {% block nav%}
+                <nav class="logo">
+                    <img src="{% static 'rezsystem/images/logo/NewportNews_DepartmentLogos_Parks&Recreation_WHITE.png' %}" alt="NNLogo" class="logo"/>
+                    <p class="p-header"> Picnic Shelter Reservation System </p>
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="#">Maps</a></li>
+                        <li><a href="#">Rules</a></li>
+                        <li><a href="{% url 'FAQ' %}">FAQ</a></li>
+                        <li><a href="#">Reserve</a></li>
+                        <li><a href="#">Checkout</a></li>
+                    </ul>
+                </nav>
+                {% endblock %}
+            </div>
+        </header>
+        <main>
 
-                <ul>
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="#">Maps</a></li>
-                    <li><a href="#">Rules</a></li>
-                    <li><a href="{% url 'FAQ' %}">FAQ</a></li>
-                    <li><a href="#">Checkout</a></li>
-                </ul>
-            </nav>
+            {% block content %}
+        
+        <!--All Webpages that extend this base html file and use the block tags will display content here-->
+
             {% endblock %}
-        </div>
-    <main>
-
-        {% block content %}
-    
-    <!--All Webpages that extend this base html file and use the block tags will display content here-->
-
-        {% endblock %}
-    </main>
-
+        </main>
+        <footer>
+            Newport News Park Campsite Office - 13564 Jefferson Avenue - Newport News, Virginia 23603 - (757) 888-3333 - 1-800-203-8322
+        </footer>
     </body>
 </html>
