@@ -7,3 +7,9 @@ def index(request):
 
 def FAQ(request):
     return render(request, 'FAQ.html')
+
+def rules(request):
+    return render(request, 'rules.html')
+
+def maps(request):
+    return render(request, 'maps.html')

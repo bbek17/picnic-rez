@@ -10,7 +10,7 @@ body, html {
     text-align: center; 
     font-size: 48px; 
     color: rgb(36, 60, 123); 
-    font-family: "Helvetica", sans-serif; /* Set the font */
+    font-family: "Helvetica", sans-serif;
 }
 
 .line {
@@ -67,12 +67,12 @@ body, html {
 .arrow {
     position: absolute;
     right: 10px;
-    font-size: 18px; /* Size of the arrow */
-    position: absolute; /* Positions the arrow inside .faq-question */
-    right: 15px; /* Adjust spacing from the right */
-    top: 50%; /* Centers the arrow vertically */
-    transform: translateY(-50%); /* Centering adjustment */
-    transition: transform 0.3s; /* Smooth rotation */
+    font-size: 18px; 
+    position: absolute; 
+    right: 15px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    transition: transform 0.3s; 
 }
 
 .faq-answer {
@@ -86,11 +86,11 @@ body, html {
 }
 
 .faq-item.active .arrow {
-    transform: translateY(-50%) rotate(180deg); /* Rotate the arrow when active */
+    transform: translateY(-50%) rotate(180deg);
 }
 
 .faq-item.active .faq-answer {
-    display: block; /* Shows the answer when the parent is active */
+    display: block; 
 }
 
 .faq-image{

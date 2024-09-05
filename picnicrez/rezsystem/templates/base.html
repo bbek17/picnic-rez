@@ -8,19 +8,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="{% static 'rezsystem/CSS/base.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'rezsystem/CSS/index.css' %}">
-        <link rel="stylesheet" href="{% static 'rezsystem/CSS/FAQ.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'rezsystem/CSS/FAQ.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'rezsystem/CSS/rules.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'rezsystem/CSS/maps.css' %}">
     </head>
     <body>
         <header>
             <div class="container">
                 {% block nav%}
                 <nav class="logo">
-                    <img src="{% static 'rezsystem/images/logo/NewportNews_DepartmentLogos_Parks&Recreation_WHITE.png' %}" alt="NNLogo" class="logo"/>
+                    <img src="{% static 'rezsystem/images/logo/NewportNews_DepartmentLogos_Parks&Recreation_WHITE.png' %}" alt="NNLogo" class="logo"></img>
                     <p class="p-header"> Picnic Shelter Reservation System </p>
                     <ul>
                         <li><a href="{% url 'home' %}">Home</a></li>
-                        <li><a href="#">Maps</a></li>
-                        <li><a href="#">Rules</a></li>
+                        <li><a href="{% url 'maps' %}">Maps</a></li>
+                        <li><a href="{% url 'rules' %}">Rules</a></li>
                         <li><a href="{% url 'FAQ' %}">FAQ</a></li>
                         <li><a href="#">Reserve</a></li>
                         <li><a href="#">Checkout</a></li>
@@ -38,7 +40,14 @@
             {% endblock %}
         </main>
         <footer>
-            Newport News Park Campsite Office - 13564 Jefferson Avenue - Newport News, Virginia 23603 - (757) 888-3333 - 1-800-203-8322
+            <div class="footer-content">
+                <div class="footer-img">
+                    <img src="{% static 'rezsystem/images/logo/NNLogos_Stacked_White_Parks&Recreation.png' %}" alt="NNLogo2">
+                </div>
+                <div class="footer-text">
+                    Newport News Park Campsite Office - 13564 Jefferson Avenue - Newport News, Virginia 23603 - (757) 888-3333 - 1-800-203-8322
+                </div> 
+            </div>   
         </footer>
     </body>
 </html>

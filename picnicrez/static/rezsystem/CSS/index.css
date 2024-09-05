@@ -34,19 +34,18 @@
 }
 
 .picnicinfo {
-    width: 75%;
+    width: 100%;
     max-width: 1000px;
-    margin-top: 600px;
+    margin-top: 530px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
     padding: 0px;
     color: black;
- 
 }
 
 .index-boxtable {
-    margin-top: 150px;
+    margin-top: 0 auto;
     display: table;
     width: 100%;
 }
@@ -58,7 +57,7 @@
 .index-boxcell {
     display: table-cell;
     padding: 15px;
-    border: 1px black; /* Optional border for cells */
+    border: 1px black; 
     vertical-align: top;
 }
 
@@ -66,7 +65,7 @@
     font-size: 50px;
     font-family: "Helvetica", sans-serif;
     font-weight: bold;
-    border: 1px black; /* Optional border for cells */
+    border: 1px black;
     text-align: center;
 }
 
@@ -78,20 +77,88 @@
     color: #7BAE78
 }
 
-.index-boxcell3, .index-boxcell4 {
-    font-size: 30px;
+.index-boxcell3 {
+    font-size: 20px;
     font-family: "Arial", sans-serif;
     line-height: 1.3;
-    border: 1px black; /* Optional border for cells */
-    text-align: center;
-}
-
-.index-list {
-    margin: 1%;
-    padding-left: 50px; /* Indent list items */
+    border: 1px black; 
     text-align: left;
 }
 
+.index-boxcell4 {
+    font-size: 18px;
+    font-family: "Arial", sans-serif;
+    line-height: 1.3;
+    border: 1px black; 
+    text-align: center;
+}
+.index-boxcell4 li{
+    text-align: left;
+}
+
+.index-boxcell6{
+    font-size: 20px;
+    font-family: "Arial", sans-serif;
+    line-height: 1.3;
+    text-align: center;
+}
+.index-list {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0; 
+    display: table;
+    width: 100%;
+    border: 1px solid rgb(126, 126, 126); /* Border around the whole table */
+}
+
 .index-list li {
-    margin-bottom: 10px; /* Space between list items */
+    display: grid;
+    grid-template-columns: 1.25fr 1.5fr 2fr 1fr; 
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.list-cell {
+    padding: 10px; 
+    border-right: 1px solid #ddd; /* Light border on the right side of each cell */
+}
+
+.index-list li .list-cell:last-child {
+    border-right: none;
+}
+
+.index-list li:first-of-type{
+    background-color: #3B3A3A;
+    color: white;
+}
+
+.index-list li:nth-child(odd):not(:first-of-type){
+    background-color: #f9f9f9;
+}
+
+.index-list li:nth-child(even){
+    background-color: #e9e9e9;
+}
+
+.button-link {
+    display: inline-block; 
+    padding: 15px 25px; 
+    font-size: 30px; 
+    color: #fff; 
+    background-color: #7BAE78;
+    border-radius: 10px; 
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.button-link:hover {
+    background-color: #6a9a68; 
+    transform: translateY(-2px); 
+}
+
+.button-link:active {
+    background-color: #00408a; 
+    transform: translateY(0); 
 }
