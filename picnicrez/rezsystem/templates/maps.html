@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="map-h1">
+        <h1> Select Park to View Maps </h1>
+    </div>
+    <div class="map-line"></div>
+
+    <div class="map-container">
+        <div class="map-item">
+            <button class="map-question">City Maps
+                <i class="arrow fas fa-chevron-down"></i></button>
+            <div class="map-answer">
+                <ul class="shelterimages">
+                    <li class="overhead"><a href="#">City of Newport News</a></li>
+                    <li class="overhead"><a href="https://nnparksandrec.org/wp-content/uploads/2022/02/Nnpmap2015_201510050931451486.pdf" target="_blank">Newport News Park</a></li>
+                </ul>
+            </div>
+        </div>    
+        <div class="map-item">
+            <button class="map-question">Anderson Park
+                <i class="arrow fas fa-chevron-down"></i></button>
+            <div class="map-answer">
+                <ul class="shelterimages">
+                    <li class="overhead"><a href={% static 'rezsystem/images/sheltermaps/PYBandAndersonNorthAerial.jpg'%} target="_blank">North's Overhead View</a></li>
+                    <li class="overhead"><a href={% static 'rezsystem/images/sheltermaps/AndersonSouthAerial.jpg'%} target="_blank">South's Overhead View</a></li>
+                </ul>
+            </div>
+        </div>    
+        <div class="map-item">
+            <button class="map-question">Deer Park
+                <i class="arrow fas fa-chevron-down"></i></button>
+            <div class="map-answer">
+                <ul class="shelterimages">
+                    <li class="overhead"><a href={% static 'rezsystem/images/sheltermaps/DPKAerial.png'%} target="_blank">Overhead View</a></li>
+                </ul>
+            </div>
+        </div>        
+        <div class="map-item">
+            <button class="map-question">Harwood's Mill Park
+                <i class="arrow fas fa-chevron-down"></i>
+            </button>
+            <div class="map-answer">
+                <ul class="shelterimages">
+                    <li class="overhead"><a href={% static 'rezsystem/images/sheltermaps/HWMAerial.jpeg'%} target="_blank">Overhead View</a></li>
+
+                </ul>
+            </div>
+        </div>        
+        <div class="map-item">
+            <button class="map-question">Huntington Park
+                <i class="arrow fas fa-chevron-down"></i>
+            </button>
+            <div class="map-answer">
+                <ul class="shelterimages">
+                    <li class="overhead"><a href={% static 'rezsystem/images/sheltermaps/HPKAerial.jpg'%} target="_blank">Overhead View</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="map-item">
+            <button class="map-question">King-Lincoln Park
+                <i class="arrow fas fa-chevron-down"></i>
+            </button>
+            <div class="map-answer">
+                <ul class="shelterimages">
+                    <li class="overhead"><a href={% static 'rezsystem/images/sheltermaps/KLPAerial.JPG.png' %} target="_blank">Overhead View</a></li>
+                </ul>
+            </div>
+        </div>        
+        <div class="map-item">
+            <button class="map-question">Newport News Park
+                <i class="arrow fas fa-chevron-down"></i></button>
+            <div class="map-answer">
+                <ul class="shelterimages">
+                    <li class="overhead"><a href="https://nnparksandrec.org/wp-content/uploads/2022/02/Nnpmap2015_201510050931451486.pdf" target="_blank">Overhead View</a></li>
+                    <li class="shelter"><a href="{% static 'rezsystem/images/sheltermaps/PicnicArea1.png'%}" target="_blank">Shelter Area 1</a></li>
+                    <li class="shelter"><a href="{% static 'rezsystem/images/sheltermaps/PicnicArea2&3.png'%}" target="_blank">Shelter Area 2 & 3</a></li>
+                    <li class="shelter"><a href="{% static 'rezsystem/images/sheltermaps/PicnicArea4.png'%}" target="_blank">Shelter Area 4</a></li>
+                </ul>
+            </div>
+        </div>        
+        <div class="map-item">
+            <button class="map-question">Peterson's Yacht Basin
+                <i class="arrow fas fa-chevron-down"></i></button>
+            <div class="map-answer">
+                <ul class="shelterimages">
+                    <li class="overhead"><a href={% static 'rezsystem/images/sheltermaps/PYBandAndersonNorthAerial.jpg'%} target="_blank">Overhead View</a></li>
+                </ul>
+            </div>
+        </div>        
+        <div class="map-item">
+            <button class="map-question">Riverview Farm Park
+                <i class="arrow fas fa-chevron-down"></i></button>
+            <div class="map-answer">
+                <ul class="shelterimages">
+                    <li class="overhead"><a href={% static 'rezsystem/images/sheltermaps/RFPAerial.png'%} target="_blank">Overhead View</a></li>
+                </ul>
+            </div>
+        </div>        
+    </div>    
+    <script src={% static 'rezsystem/JS/map.js' %}></script>
+</body>
+
+{% endblock %}
